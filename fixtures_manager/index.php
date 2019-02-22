@@ -2,7 +2,6 @@
 require('../model/database.php');
 require('../model/standing_db.php');
 require('../model/league_db.php');
-
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
@@ -10,7 +9,6 @@ if ($action == NULL) {
         $action = 'list_standings';
     }
 }
-
 if ($action == 'list_standings') {
     $league_id = filter_input(INPUT_GET, 'league_id', 
             FILTER_VALIDATE_INT);
@@ -21,7 +19,6 @@ if ($action == 'list_standings') {
     $league_name = get_league_name($league_id);
     $leagues = get_leagues();
     $standings = get_standings_by_league($league_id);
-
     include('standing_list.php');
 } else if ($action == 'show_edit_form') {
     $standing_id = filter_input(INPUT_POST, 'standing_id', 
@@ -39,17 +36,15 @@ if ($action == 'list_standings') {
     $league_id = filter_input(INPUT_POST, 'league_id', 
             FILTER_VALIDATE_INT);
     $team = filter_input(INPUT_POST, 'team');
-    $wins = filter_input(INPUT_POST, 'wins');
+    $wins = filter_input(INPUT_POST, 'wins', FILTER_VALIDATE_FLOAT);
     $points = filter_input(INPUT_POST, 'points', FILTER_VALIDATE_FLOAT);
-
     if ($standing_id == NULL || $standing_id == FALSE || $league_id == NULL || 
             $league_id == FALSE || $team == NULL || $wins == NULL || 
-            $points == NULL || $points == FALSE) {
-        $error = "Invalid product data. Check all fields and try again.";
+            $points == NULL || $points == FALSE || $wins == FALSE) {
+        $error = "Incorrect format. Please try again.";
         include('../errors/error.php');
     } else {
         update_standing($standing_id, $league_id, $team, $wins, $points);
-
         header("Location: .?league_id=$league_id");
     }
 } else if ($action == 'delete_standing') {
@@ -72,11 +67,11 @@ if ($action == 'list_standings') {
     $league_id = filter_input(INPUT_POST, 'league_id', 
             FILTER_VALIDATE_INT);
     $team = filter_input(INPUT_POST, 'team');
-    $wins = filter_input(INPUT_POST, 'wins');
+    $wins = filter_input(INPUT_POST, 'wins', FILTER_VALIDATE_FLOAT);
     $points = filter_input(INPUT_POST, 'points', FILTER_VALIDATE_FLOAT);
     if ($league_id == NULL || $league_id == FALSE || $team == NULL || 
-            $wins == NULL || $points == NULL || $points == FALSE) {
-        $error = "Invalid product data. Check all fields and try again.";
+            $wins == NULL || $points == NULL || $points == FALSE || $wins == FALSE) {
+        $error = "Incorrect format. Please try again.";
         include('../errors/error.php');
     } else { 
         add_standing($league_id, $team, $wins, $points);
@@ -87,7 +82,6 @@ if ($action == 'list_standings') {
     include('league_list.php');
 } else if ($action == 'add_league') {
     $name = filter_input(INPUT_POST, 'name');
-
     if ($name == NULL) {
         $error = "Invalid category name. Check name and try again.";
         include('../errors/error.php');
