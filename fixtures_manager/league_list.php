@@ -5,7 +5,7 @@
     <table>
         <tr>
             <th>Name</th>
-            <th>&nbsp;</th>
+            <th>Delete</th>
         </tr>
         <?php foreach ($leagues as $league) : ?>
         <tr>
@@ -35,6 +35,7 @@
     </form>
 
     <p><a href="index.php?action=list_standings">List Standings</a></p>
+    <p><a href="../team_info/">View Team Information</a></p>
 
 </main>
 <?php include '../view/footer.php'; ?>
