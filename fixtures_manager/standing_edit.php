@@ -1,6 +1,6 @@
 <?php include '../view/header.php'; ?>
 <main>
-    <h1>Edit Product</h1>
+    <h1>Edit Standing</h1>
     <form action="index.php" method="post" id="add_standing_form">
 
         <input type="hidden" name="action" value="update_standing">

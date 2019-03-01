@@ -1,4 +1,4 @@
-        <nav>
+<nav>
             <ul>
                 <?php foreach($leagues as $league) : ?>
                 <li>
@@ -10,4 +10,3 @@
                 <?php endforeach; ?>
             </ul>
         </nav>
-

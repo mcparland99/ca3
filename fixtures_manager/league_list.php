@@ -34,7 +34,7 @@
         <input type="submit" value="Add">
     </form>
 
-    <p><a href="index.php?action=list_standings">List Standings</a></p>
+    <p><a href="index.php?action=list_standings">List Standings</a></p
     <p><a href="../team_info/">View Team Information</a></p>
 
 </main>

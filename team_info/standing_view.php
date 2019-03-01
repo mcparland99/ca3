@@ -14,9 +14,9 @@
         </div>
 
         <div id="right_column">
-            <p><b>Team:</b> $<?php echo $team; ?></p>
-            <p><b>Wins This Season:</b> $<?php echo $wins; ?></p>
-            <p><b>Points:</b> $<?php echo $points; ?></p>
+            <p><b>Team: </b><?php echo $team; ?></p>
+            <p><b>Wins This Season: </b><?php echo $wins; ?></p>
+            <p><b>Points: </b><?php echo $points; ?></p>
         </div>
     </section>
 </main>
