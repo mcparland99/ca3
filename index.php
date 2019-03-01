@@ -4,7 +4,7 @@
     <h1>Menu</h1>
     <ul>
         <li>
-            <a href="fixtures_manager">Fixtures Manager</a>
+            <a href="fixtures_manager">Standings Manager</a>
         </li>
         <li>
             <a href="team_info">Team Information</a>
