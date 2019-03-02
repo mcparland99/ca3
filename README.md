@@ -1,4 +1,4 @@
-# Football Leagues and Fixtures Manager
+# Football Leagues and Standings Manager
 
 The application allows users to view details about football leagues and fixtures, and add new information or update existing information.
 
