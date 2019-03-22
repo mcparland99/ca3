@@ -35,7 +35,7 @@
     </form>
 
     <p><a href="index.php?action=list_standings">List Standings</a></p
-    <p><a href="../team_info/">View Team Information</a></p>
+    <p><a href="../team_controller">View Team Information</a></p>
 
 </main>
 <?php include '../view/footer.php'; ?>
