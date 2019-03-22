@@ -7,6 +7,17 @@ body {
   overflow-x: hidden;
 }
 
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+td, th {
+    border: 1px dashed black;
+    padding: .2em .5em .2em .5em;
+    text-align: left;
+}
+
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;

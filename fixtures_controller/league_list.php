@@ -1,4 +1,4 @@
-<?php include '../view/header.php'; ?>
+
 <main>
 
     <h1>Leagues List</h1>
