@@ -79,7 +79,8 @@
                                                value="<?php echo $standing['standingID']; ?>">
                                         <input type="hidden" name="league_id"
                                                value="<?php echo $standing['leagueID']; ?>">
-                                        <input class = "btn btn-sm btn-danger" type="submit" value="Delete">
+                                        <input class = "btn btn-sm btn-danger" id = "delete_standing" type="submit" value="Delete">
+                              
                                     </form></td>
                             </tr>
                         <?php endforeach; ?>
@@ -91,9 +92,55 @@
                 <p><a href="../img_upload.php">Upload Image</a>
             </div>
         </div
+
         <!-- Bootstrap core JavaScript -->
         <script src="../vendor/jquery/jquery.min.js"></script>
         <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Sweet Alert CDN  & script-->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+          
+            $(document).on('click', '#delete_standing', function (e) {
+                var standingId = $(this).data('id');
+                SwalDelete(standingId);
+                e.preventDefault();
+            });
+            
+            function SwalDelete(standingId) {
+                swal({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    buttons: true,
+                    dangerMode: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!',
+                    showLoaderOnConfirm: true,
+                    preConfirm: function () {
+                        return new Promise(function (resolve) {
+                            $.ajax({
+                                url: 'standings_delete.php',
+                                type: 'POST',                 
+                                data: 'delete='+standingId,
+                                dataType: 'json'
+                            })
+                                    .done(function (res) {
+                                        swal('Deleted!', res.message, res.status);
+                                        readProducts();
+                                    })
+                                    .fail(function () {
+                                        swal('Oops...', 'Something went wrong with ajax !', 'error');
+                                    });
+                        });
+                    },
+                    allowOutsideClick: false
+                });
+            }
+
+        </script>
+
 
         <!-- Menu Toggle Script -->
         <script>
