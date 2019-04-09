@@ -57,7 +57,7 @@
                     <p><b>Points: </b><?php echo $points; ?></p>
                 </div>
             </div>
-
+<script src="https://www.phpkobo.com/mod/ALNJX/v2.09/demoex/cn/ajax-likes.php?tpl=tpl-1&iid=demo-001"></script>
         </div>
     </div>
 
