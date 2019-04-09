@@ -2,11 +2,22 @@
 <html>
     
     <?php include 'view/header.php'; ?>
+    
     <body>
 
         <div class="d-flex" id="wrapper">
 
-       <?php include 'view/sidebar_nav.php'; ?>
+      <!-- Sidebar -->
+            <div class="bg-light border-right" id="sidebar-wrapper">
+                <div class="sidebar-heading">Football League Standings</div>
+                <div class="list-group list-group-flush">
+                    <a href="index.php" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+                    <a href="standings_controller" class="list-group-item list-group-item-action bg-light">Fixtures Manager</a>
+                    <a href="team_controller/" class="list-group-item list-group-item-action bg-light">Team Information</a>
+                    
+                </div>
+            </div>
+            <!-- /#sidebar-wrapper -->
 
 
             <!-- Page Content -->
@@ -27,6 +38,8 @@
                     <p>The Football League Standings web application  allows users to view details about football leagues and fixtures, and add new information or update existing information.</p>
                     <p>The fixtures manager lets the user add and delete football leagues, and also add, update and delete football teams and their standing. There is a link to upload an image to a folder.</p>
                 </div>
+                
+                <div id="photos"></div>
             </div>
             <!-- /#page-content-wrapper -->
 
@@ -45,5 +58,6 @@
             });
         </script>
 
+    </body>
 
-<?php include 'view/footer.php'; ?>
+</html>

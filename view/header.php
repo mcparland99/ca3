@@ -1,5 +1,6 @@
     <head>
         <title>Football League Standings</title>
+        
         <!-- Main CSS -->
         <link href="../css/main.css" rel="stylesheet" type="text/css"/>
         <!-- Bootstrap core CSS -->
@@ -11,5 +12,6 @@
         <!-- Favicon  -->
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+         
     </head>

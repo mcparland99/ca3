@@ -19,8 +19,11 @@ function get_standings_by_league($league_id) {
     $statement->bindValue(":league_id", $league_id);
     $statement->execute();
     $standings = $statement->fetchAll();
-    $statement->closeCursor();
+    $statement->closeCursor();   
+
     return $standings;
+    
+   
 }
 
 function get_standing($standing_id) {
@@ -44,6 +47,7 @@ function delete_standing($standing_id) {
     $statement->execute();
     $statement->closeCursor();
 }
+
 
 function add_standing($league_id, $team, $wins, $points) {
     global $db;
