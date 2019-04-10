@@ -22,19 +22,19 @@
             <tr>
                 <td><?php echo $player['name']; ?></td>
                 <td><?php echo $player['team']; ?></td>
-                <td class="right"><?php echo $player['goalsScored']; ?></td>
+                <td class="right"><?php echo $player['goals']; ?></td>
                 <td><form action="." method="post">
                     <input type="hidden" name="action"
                            value="show_edit_form">
                     <input type="hidden" name="player_id"
                            value="<?php echo $player['playerID']; ?>">
                     <input type="hidden" name="league_id"
-                           value="<?php echo $standing['leagueID']; ?>">
+                           value="<?php echo $player['leagueID']; ?>">
                     <input type="submit" value="Edit">
                 </form></td>
                 <td><form action="." method="post">
                     <input type="hidden" name="action"
-                           value="delete_standing">
+                           value="delete_player">
                     <input type="hidden" name="player_id"
                            value="<?php echo $player['playerID']; ?>">
                     <input type="hidden" name="league_id"
