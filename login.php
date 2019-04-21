@@ -72,8 +72,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link href="main.css" rel="stylesheet" type="text/css"/>
+    <title>Football Standings Login</title>
+ <?php include 'view/header.php'; ?>
 
 </head>
 <body>
