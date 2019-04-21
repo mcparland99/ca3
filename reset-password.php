@@ -61,7 +61,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Reset Password</title>
-        <link href="main.css" rel="stylesheet" type="text/css"/>
+         <?php include 'view/header.php'; ?>
+
 </head>
 <body>
     <div class="wrapper">
