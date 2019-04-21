@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+   header("Location:Login.php");
+}
+?>
 <!DOCTYPE html>
 <html>
     
@@ -16,7 +22,18 @@
                     <a href="team_controller/" class="list-group-item list-group-item-action bg-light">Team Information</a>
                     
                 </div>
+                <div class="list-group-item-light" id="sidebar-wrapped">
+                    <div>
+                    <a href="logout.php" >Log out</a>
+                    </div>
+                    <div>
+                    <a href="reset-password.php" >Reset password</a>
+                    </div>
+                   
+                </div>
+                
             </div>
+      
             <!-- /#sidebar-wrapper -->
 
 
