@@ -1,5 +1,6 @@
 <?php
 require_once "config.php";
+
  
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
@@ -77,7 +78,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-        <link href="main.css" rel="stylesheet" type="text/css"/>
+       <?php include 'view/header.php'; ?>
 </head>
 <body>
     <div class="wrapper">
