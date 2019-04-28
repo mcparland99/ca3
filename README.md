@@ -1,5 +1,7 @@
 # Football Standings
 
+[![Image from Gyazo](https://i.gyazo.com/19876832be4c5bbaf159ff3f4ee4699e.png)](https://gyazo.com/19876832be4c5bbaf159ff3f4ee4699e)
+
 The Football League Standings web application allows users to view details about football leagues and fixtures, and add new information or update existing information on teams,leagues and standings to help them keep track of their leagues and teams.
 
 ## Getting Started
