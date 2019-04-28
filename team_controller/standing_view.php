@@ -16,16 +16,29 @@
     </head>
     <div class="d-flex" id="wrapper">
 
-        <!-- Sidebar -->
-        <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Football League Standings</div>
-            <div class="list-group list-group-flush">
-                <a href="../index.php" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-                <a href="../standings_controller" class="list-group-item list-group-item-action bg-light">Fixtures Manager</a>
-                <a href="index.php" class="list-group-item list-group-item-action bg-light">Team Information</a>                 
+       
+                 <!-- Sidebar -->
+            <div class="bg-light border-right" id="sidebar-wrapper">
+                <div class="sidebar-heading">Football League Standings</div>
+                <div class="list-group list-group-flush">
+                    <a href="../index.php" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+                    <a href="../standings_controller" class="list-group-item list-group-item-action bg-light">Fixtures Manager</a>
+                    <a href="team_controller/" class="list-group-item list-group-item-action bg-light">Team Information</a>
+                    <a href="../players_controller" class="list-group-item list-group-item-action bg-light">Player Information</a>
+                </div>
+                <div class="list-group-item-light" id="sidebar-wrapped">
+                    <div>
+                    <a href="../logout.php" >Log out</a>
+                    </div>
+                    <div>
+                    <a href="../reset-password.php" >Reset password</a>
+                    </div>
+                   
+                </div>
+                
             </div>
-        </div>
-        <!-- /#sidebar-wrapper -->
+      
+            <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper">
 

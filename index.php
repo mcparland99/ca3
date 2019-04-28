@@ -20,7 +20,7 @@ if(!isset($_SESSION['username'])){
                     <a href="index.php" class="list-group-item list-group-item-action bg-light">Dashboard</a>
                     <a href="standings_controller" class="list-group-item list-group-item-action bg-light">Fixtures Manager</a>
                     <a href="team_controller/" class="list-group-item list-group-item-action bg-light">Team Information</a>
-                    
+                    <a href="players_controller" class="list-group-item list-group-item-action bg-light">Player Information</a>
                 </div>
                 <div class="list-group-item-light" id="sidebar-wrapped">
                     <div>
@@ -51,7 +51,9 @@ if(!isset($_SESSION['username'])){
                 </nav>
 
                 <div class="container-fluid">
-                    <h1 class="mt-4">Football League Standings App</h1>
+                        <div class="page-header">
+            <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to Football League Standings App</h1>
+        </div>
                     <p>The Football League Standings web application  allows users to view details about football leagues and fixtures, and add new information or update existing information.</p>
                     <p>The fixtures manager lets the user add and delete football leagues, and also add, update and delete football teams and their standing. There is a link to upload an image to a folder.</p>
                 </div>

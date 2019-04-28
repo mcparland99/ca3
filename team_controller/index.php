@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+if(!isset($_SESSION['username'])){
+   header("Location:Login.php");
+}
+
 require('../model/database.php');
 require('../model/standing_db.php');
 require('../model/league_db.php');
