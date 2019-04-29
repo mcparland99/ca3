@@ -8,7 +8,7 @@ if(!isset($_SESSION['username'])){
 <html>
     
     <?php include 'view/header.php'; ?>
-    
+ 
     <body>
 
         <div class="d-flex" id="wrapper">
@@ -39,7 +39,7 @@ if(!isset($_SESSION['username'])){
 
             <!-- Page Content -->
             <div id="page-content-wrapper">
-
+                
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                     <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
 
@@ -51,14 +51,19 @@ if(!isset($_SESSION['username'])){
                 </nav>
 
                 <div class="container-fluid">
+                        
+        
                         <div class="page-header">
             <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to Football League Standings App</h1>
         </div>
-                    <p>The Football League Standings web application  allows users to view details about football leagues and fixtures, and add new information or update existing information.</p>
+                
+                    <p>The Football League Standings web application allows users to view details about football leagues and fixtures, and add new information or update existing information.</p>
                     <p>The fixtures manager lets the user add and delete football leagues, and also add, update and delete football teams and their standing. There is a link to upload an image to a folder.</p>
+              
+        
                 </div>
                 
-                <div id="photos"></div>
+               
             </div>
             <!-- /#page-content-wrapper -->
 
